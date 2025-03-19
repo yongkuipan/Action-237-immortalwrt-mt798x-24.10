@@ -77,7 +77,6 @@ jobs:
         cd openwrt
         ./scripts/feeds install -a -f -p passwall_packages
         ./scripts/feeds install luci-app-passwall 
-        ./scripts/feeds install -a
         
          
     - name: Load custom configuration
