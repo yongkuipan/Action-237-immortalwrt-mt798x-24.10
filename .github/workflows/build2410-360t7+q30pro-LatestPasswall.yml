@@ -10,7 +10,7 @@
 # See /LICENSE for more information.
 #
 
-name: Build imm2410 360T7 Latest Passwall+Xray
+name: Build immortalwrt24.10 360T7 + Q30Pro Latest Passwall+Xray
 
 on:
   repository_dispatch:
