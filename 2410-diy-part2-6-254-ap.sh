@@ -20,4 +20,4 @@ sed -i 's/192.168.6.1/192.168.6.254/g' package/base-files/files/bin/config_gener
 sed -i 's/OpenWrt/AP-HanimmWrt/g' package/base-files/files/bin/config_generate
 
 # Modify filename, add date prefix
-sed -i 's/IMG_PREFIX:=/IMG_PREFIX:=AP-$(shell date +"%Y%m%d")-24.10/1' include/image.mk
+sed -i 's/IMG_PREFIX:=/IMG_PREFIX:=AP-$(shell TZ="Asia/Shanghai" date +"%Y%m%d")-24.10/1' include/image.mk
