@@ -26,7 +26,7 @@ sed -i 's/IMG_PREFIX:=/IMG_PREFIX:=$(shell date +"%Y%m%d")-pw-23.05/1' include/i
 sed -i '$a\\sleep 3' package/network/services/ppp/files/lib/netifd/ppp-down
 
 # Modify opkg url, change mt7981 to filogic
-sed -i.bak "s,mt7981,filogic,g" "/etc/opkg/distfeeds.conf"
+sed -i "s,mt7981,filogic,g" "package/base-files/files/etc/opkg/distfeeds.conf"
 
 # Modify opkg url, del passwall
-sed -i.bak '/passwall/d' "/etc/opkg/distfeeds.conf"
+sed -i '/passwall/d' "package/base-files/files/etc/opkg/distfeeds.conf"
