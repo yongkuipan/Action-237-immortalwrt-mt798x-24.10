@@ -24,3 +24,9 @@ sed -i 's|IMG_PREFIX:=|IMG_PREFIX:=$(shell TZ="Asia/Shanghai" date +"%Y%m%d")-PW
 
 # Modify ppp-down, add sleep 3. my source code is change, no need this
 sed -i '$a\\sleep 3' package/network/services/ppp/files/lib/netifd/ppp-down
+
+# Modify opkg url, change mt7981 to filogic
+sed -i.bak "s,mt7981,filogic,g" "/etc/opkg/distfeeds.conf"
+
+# Modify opkg url, del passwall
+sed -i.bak '/passwall/d' "/etc/opkg/distfeeds.conf"
