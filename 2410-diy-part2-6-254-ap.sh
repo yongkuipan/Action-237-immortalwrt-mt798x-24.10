@@ -21,3 +21,9 @@ sed -i 's/OpenWrt/AP-HanimmWrt/g' package/base-files/files/bin/config_generate
 
 # Modify filename, add date prefix
 sed -i 's|IMG_PREFIX:=|IMG_PREFIX:=AP-$(shell TZ="Asia/Shanghai" date +"%Y%m%d")-24.10|' include/image.mk
+
+# Modify opkg url, change mt7981 to filogic
+sed -i.bak "s,mt7981,filogic,g" "/etc/opkg/distfeeds.conf"
+
+# Modify opkg url, del passwall
+sed -i.bak '/passwall/d' "/etc/opkg/distfeeds.conf"
