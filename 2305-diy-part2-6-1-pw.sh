@@ -29,5 +29,5 @@ sed -i '$a\\sleep 3' package/network/services/ppp/files/lib/netifd/ppp-down
 sed -i '/^exit 0$/i sed -i "s,mt7981,filogic,g" "package/base-files/files/etc/opkg/distfeeds.conf"\nsed -i '\''/passwall/d'\'' "package/base-files/files/etc/opkg/distfeeds.conf"' package/emortal/default-settings/files/99-default-settings-chinese
 
 # Insert code to display distfeeds.conf before exit 0
-sed -i '/^exit 0$/i echo "Displaying distfeeds.conf content:"\ncat "package/base-files/files/etc/opkg/distfeeds.conf"' package/emortal/default-settings/files/99-default-settings-chinese
+#sed -i '/^exit 0$/i echo "Displaying distfeeds.conf content:"\ncat "package/base-files/files/etc/opkg/distfeeds.conf"' package/emortal/default-settings/files/99-default-settings-chinese
     
