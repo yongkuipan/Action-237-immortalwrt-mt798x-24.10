@@ -10,7 +10,7 @@
 # See /LICENSE for more information.
 #
 
-name: Build immortalwrt23.05 360T7 Latest Passwall+Xray
+name: RUN IN BRANCH 23.05! Build immortalwrt23.05 360T7 Latest Passwall+Xray
 
 on:
   repository_dispatch:
@@ -20,7 +20,6 @@ env:
   REPO_URL: https://github.com/padavanonly/immortalwrt-mt798x-23.05
   REPO_BRANCH: openwrt-23.05
   FEEDS_CONF: feeds.conf.default
-  FILES_CONF: files2305
   CONFIG_FILE: 360t7+pw+xray+socksr-libev.config
   DIY_P1_SH: diy-part1-pw.sh
   DIY_P2_SH: 2305-diy-part2-6-1-pw.sh
@@ -83,7 +82,7 @@ jobs:
          
     - name: Load custom configuration
       run: |
-        [ -e $FILES_CONF ] && mv $FILES_CONF openwrt/files
+        [ -e files ] && mv files openwrt/files
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         chmod +x $DIY_P2_SH
         cd openwrt
