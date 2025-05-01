@@ -16,3 +16,7 @@ JCG Q30 PRO极简AP固件。
 注意，新建的repositories ，要修改权限（原来只读，改成读写权限）。
 
 Settings，Actions，General，右侧栏拉到最下面，	Workflow permissions，勾选 Read and write permissions
+
+----------------------------------------------------------------
+更新刷写固件时，跨版本更新的，记得不要保存设置。
+刷写完新固件后，尤其是跨版本更新的，记得先清理浏览器缓存，再访问路由器进行设置。
