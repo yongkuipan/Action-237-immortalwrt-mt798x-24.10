@@ -22,6 +22,16 @@ https://github.com/fw876/helloworld
 **English** | [中文](https://p3terx.com/archives/build-openwrt-with-github-actions.html)
 
 ----------------------------------------------------------------
+config配置文件，建议采用本地生成。可装linux或者Windows下装wsl，按照官方编译步骤操作。
+
+passwall最新模块需要更改feeds.conf.default，文件开始处插入：
+
+```
+src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall-packages.git;main
+src-git passwall https://github.com/xiaorouji/openwrt-passwall.git;main
+```
+
+----------------------------------------------------------------
 注意，新建的repositories ，要修改权限（原来只读，改成读写权限）。
 
 Settings，Actions，General，右侧栏拉到最下面，	Workflow permissions，勾选 Read and write permissions
