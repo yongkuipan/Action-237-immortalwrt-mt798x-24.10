@@ -21,7 +21,7 @@ env:
   REPO_BRANCH: 2410
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: 2410-5.4-q30pro-passwall.config
-  DIY_P1_SH: 2410-diy-part1-pw.sh
+  DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: 2410-5.4-diy-part2-6-1-pw.sh
   RELEASE_FILE: 2410-5.4-pw-release.txt 
   UPLOAD_BIN_DIR: false
@@ -69,8 +69,18 @@ jobs:
       run: |
          cd openwrt
          ./scripts/feeds update -a
+
+         # 移除 openwrt feeds 自带的核心库
+         rm -rf feeds/packages/net/{xray-core,v2ray-geodata,sing-box,chinadns-ng,dns2socks,hysteria,ipt2socks,microsocks,naiveproxy,shadowsocks-libev,shadowsocks-rust,shadowsocksr-libev,simple-obfs,tcping,trojan-plus,tuic-client,v2ray-plugin,xray-plugin,geoview,shadow-tls}
+         git clone https://github.com/xiaorouji/openwrt-passwall-packages package/passwall-packages
+
+         # 移除 openwrt feeds 过时的luci版本
+         rm -rf feeds/luci/applications/luci-app-passwall
+         git clone https://github.com/xiaorouji/openwrt-passwall package/passwall-luci
+
+         # 更新 golang 1.25 版本
          rm -rf feeds/packages/lang/golang
-         git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
+         git clone https://github.com/sbwml/packages_lang_golang -b 25.x feeds/packages/lang/golang
 
 
     - name: Install feeds
