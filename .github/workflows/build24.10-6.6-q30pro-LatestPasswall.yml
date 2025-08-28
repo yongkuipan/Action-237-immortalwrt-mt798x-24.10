@@ -85,7 +85,7 @@ jobs:
         # 移除 openwrt feeds 过时的luci版本
         rm -rf feeds/luci/applications/luci-app-passwall
         git clone https://github.com/xiaorouji/openwrt-passwall package/passwall-luci        
-         
+        git clone https://github.com/jiecai58/luci-app-store/tree/main/luci
     - name: Load custom configuration
       run: |
         # [ -e files ] && mv files openwrt/files
