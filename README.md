@@ -1,14 +1,14 @@
 云编译7981固件
 （p3terx 2024新版 基于ubuntu22.04）
 
-360T7主路由固件，含插件DDNS, PASSWALL（用最新源码编译）。
+360T7 / JCG Q30 PRO 主路由固件，含插件DDNS, PASSWALL（用最新源码编译）。
 
-JCG Q30 PRO极简AP固件。
+CMCC-A10(ZN-M5) 极简AP固件。
 
 
 237大佬源码网址:
 [https://github.com/padavanonly/immortalwrt-mt798x-24.10](https://github.com/padavanonly/immortalwrt-mt798x-24.10)
-
+24.10 版本推荐 6.6内核。
 
 passwall最新源码网址：
 https://github.com/Openwrt-Passwall/openwrt-passwall
