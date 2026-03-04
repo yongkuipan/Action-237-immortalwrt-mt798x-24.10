@@ -17,7 +17,7 @@ on:
   workflow_dispatch:
 
 env:
-  REPO_URL: https://github.com/padavanonly/immortalwrt-mt798x-6.6
+  REPO_URL: https://github.com/ATang007ZH/immortalwrt-mt798x-6.6
   REPO_BRANCH: openwrt-24.10-6.6
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: 2410-6.6-cmcc-a10-stock-ap.config
@@ -77,7 +77,7 @@ jobs:
 
         # Fix a10-stock to use nand_do_upgrade
         # sed -i '/^[[:space:]]*cmcc,a10-ubootmod|\\$/d' target/linux/mediatek/filogic/base-files/lib/upgrade/platform.sh
-        sed -i '/^[[:space:]]*jcg,q30-pro|\\$/a\	cmcc,a10-stock|\\' target/linux/mediatek/filogic/base-files/lib/upgrade/platform.sh
+        # sed -i '/^[[:space:]]*jcg,q30-pro|\\$/a\	cmcc,a10-stock|\\' target/linux/mediatek/filogic/base-files/lib/upgrade/platform.sh
 
 
     - name: Load custom configuration
