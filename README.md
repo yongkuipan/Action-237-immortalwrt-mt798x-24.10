@@ -7,9 +7,9 @@ CMCC-A10(ZN-M5) 极简AP固件。
 
 
 237大佬源码网址:
-[https://github.com/padavanonly/immortalwrt-mt798x-24.10](https://github.com/padavanonly/immortalwrt-mt798x-24.10)
+[[https://github.com/padavanonly/immortalwrt-mt798x-24.10](https://github.com/padavanonly/immortalwrt-mt798x-6.6)]
 
-24.10 版本强烈推荐 6.6内核！各方面表现都优于 5.4内核。5.4过于老旧。
+【24.10 版本强烈推荐 6.6内核！各方面表现都优于 5.4内核。5.4技术过于老旧。】
 
 passwall最新源码网址：
 https://github.com/Openwrt-Passwall/openwrt-passwall
